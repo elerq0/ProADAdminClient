@@ -1,0 +1,48 @@
+
+.table {
+  position: fixed;
+  top: 100px;
+  left: 10%;
+  width: 80%;
+}
+
+.nav {
+  position: fixed;
+  min-width: 100%;
+  bottom: 25px;
+}
+
+.headers{
+  height: 30px;
+}
+
+.rows {
+  height: 30px;
+}
+
+.columnNAME {
+  width: 50%;
+  font-size: 16px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.comment {
+  position: fixed;
+  left: 5%;
+  bottom: 35px;
+  font-size: 25px;
+  color: red;
+}
+
+.button {
+  width: 15vw;
+}
+
+.formfieldTop {
+  position: fixed;
+  left: 12%;
+  top: 50px;
+  max-width: 76%;
+  min-width: 20%;
+}

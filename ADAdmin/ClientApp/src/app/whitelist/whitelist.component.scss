@@ -1,0 +1,67 @@
+.button {
+  width: 15vw;
+}
+
+.buttonsGroup {
+  position: fixed;
+  left: 1%;
+  top: 45%;
+}
+
+.buttonType {
+  width: 200px;
+  background-color: dimgray;
+  color: white;
+}
+
+
+.table {
+  position: fixed;
+  top: 100px;
+  left: calc(200px + 5%);
+  width: calc(84% - 200px);
+}
+
+.columnPATH {
+  width: 70%;
+  font-size: 16px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.headers {
+  height: 30px;
+}
+
+.rows {
+  height: 30px;
+}
+
+.comment {
+  position: fixed;
+  left: 5%;
+  bottom: 35px;
+  font-size: 25px;
+  color: red;
+}
+
+.nav {
+  position: fixed;
+  min-width: 100%;
+  bottom: 25px;
+}
+
+.formfieldTop {
+  position: fixed;
+  left: calc(200px + 10%);
+  top: 50px;
+  max-width: 76%;
+  min-width: 20%;
+}
+
+.buttonAdd {
+  @extend .button;
+  position: fixed;
+  top: 57px;
+  left: calc(200px + calc(84% - 200px) * 0.7);
+}

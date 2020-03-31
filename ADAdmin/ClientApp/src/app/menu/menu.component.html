@@ -1,0 +1,15 @@
+<div [ngClass]="'nav-menu'">
+
+  <span [ngClass]="'title'">{{title}}</span>
+  <span [ngClass]="'identity'">{{identity}} </span>
+
+  <mat-button-toggle-group [ngClass]="'button-group'">
+    <mat-button-toggle [routerLink]="['/users']" [ngClass]="'button'">Users</mat-button-toggle>
+    <mat-button-toggle [routerLink]="['/whitelist']" [ngClass]="'button'">Whitelist</mat-button-toggle>
+  </mat-button-toggle-group>
+
+</div>
+
+<div [ngClass]="'credit-menu'">
+  <span [ngClass]="'credit'">{{credits}}</span>
+</div>

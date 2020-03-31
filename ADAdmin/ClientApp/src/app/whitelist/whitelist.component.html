@@ -1,0 +1,46 @@
+<app-menu></app-menu>
+
+<mat-button-toggle-group [ngClass]="'buttonsGroup'" vertical>
+  <mat-button-toggle (click)="showWhitelistAddress()" [ngClass]="'buttonType'">Address</mat-button-toggle>
+  <mat-button-toggle (click)="showWhitelistDomain()" [ngClass]="'buttonType'">Domain</mat-button-toggle>
+</mat-button-toggle-group>
+
+<div></div>
+
+<div [style.visibility]="(mode !== 0) ? 'visible' : 'hidden'">
+
+  <mat-form-field [ngClass]="'formfieldTop'">
+    <input id="input" matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtr">
+  </mat-form-field>
+
+  <table id="table" mat-table [dataSource]="dataSource" class="table">
+    <tr>
+      <ng-container matColumnDef="path">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'columnPATH'"> Nazwa</th>
+        <td mat-cell *matCellDef="let element" [ngClass]="'columnPATH'"> {{element.path}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="func_remove">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button (click)="remove(element).catch()"> Usuń</button>
+        </td>
+      </ng-container>
+    </tr>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="headers"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="rows"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[12,6,9,15,18]" showFirstLastButtons class="nav"></mat-paginator>
+
+
+  <div>
+    <button mat-button (click)="add().catch()" [ngClass]="'buttonAdd'"> Dodaj </button>
+  </div>
+
+  <div [ngClass]="'comment'">
+    <p></p>
+    {{comment}}
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+  <div align="center">
+    {{data.username}}
+  </div>
+  <div align="left">
+    <div *ngFor="let line of data.status">
+      <div>{{line}}</div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</div>
+
